@@ -1,0 +1,412 @@
+/*========================================================
+                      Booking Form
+=========================================================*/
+/* Booking Form Basic Styles
+========================================================*/
+.booking-form {
+  display: inline-block;
+  position: relative;
+  padding: 32px 30px 31px;
+  background: #FFF;
+  max-width: 470px;
+  width: 100%;
+  color: #000;
+  font: 400 19px "Ubuntu", sans-serif;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.booking-form * + .controlHolder {
+  margin-top: 10px;
+}
+* + .booking-form_controls {
+  margin-top: 10px;
+}
+.booking-form * + p {
+  margin-top: 23px;
+}
+.booking-form .invalid input[type="text"],
+.booking-form .invalid textarea,
+.booking-form .invalid li:first-child:after,
+.booking-form .invalid .tmDatepicker:after {
+  border-color: #FF6056;
+}
+@media (max-width: 767px) {
+  .booking-form {
+    max-width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .booking-form {
+    padding: 15px 10px 30px;
+  }
+}
+
+.booking-form input[type="text"], .booking-form textarea {
+  font: 400 19px "Ubuntu", sans-serif;
+  text-transform: uppercase;
+  line-height: 22px;
+  padding: 19px 18px 19px;
+  color: #c1c1c1;
+}
+
+.booking-form input[type="text"], .booking-form textarea {
+  background-color: #fff;
+  border: 1px solid #e7e6e6;
+  width: 100%;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-transition: 0.3s border-color ease;
+  -o-transition: 0.3s border-color ease;
+  -webkit-transition: 0.3s border-color ease;
+  transition: 0.3s border-color ease;
+}
+
+/* Booking Form Control Holder
+========================================================*/
+.controlHolder {
+  position: relative;
+  -moz-transition: 0.4s all ease;
+  -o-transition: 0.4s all ease;
+  -webkit-transition: 0.4s all ease;
+  transition: 0.4s all ease;
+}
+
+/* Booking Form Input
+========================================================*/
+.booking-form input[type="text"] {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  height: 60px;
+  margin: 0;
+}
+
+/* Booking Form Textarea
+========================================================*/
+.booking-form textarea {
+  display: block;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  resize: vertical;
+  height: 52px;
+  overflow: auto;
+}
+
+/* Booking Form Buttons
+========================================================*/
+.booking-form_controls {
+  text-align: center;
+}
+/*.booking-form_controls .btn {
+  display: block;
+}*/ 
+
+/* Booking Form Select
+========================================================*/
+.tmSelect {
+  display: block;
+  position: relative;
+  z-index: 5;
+}
+.tmSelect input {
+  padding-right: 50px;
+  position: relative;
+  cursor: pointer;
+}
+.tmSelect input:focus {
+  cursor: text;
+}
+.tmSelect li:first-child:after {
+  content: "\f078";
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 36px;
+  height: 37px;
+  font: 400 14px/20px "FontAwesome";
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #FFF;
+  z-index: -1;
+}
+.tmSelect + .error-message {
+  z-index: 5;
+}
+.tmSelect li:first-child.open:after {
+  border-color: #EBBE74;
+}
+
+/* Booking Form Select Dropdown
+========================================================*/
+.transformSelectDropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  color: #848071;
+  background: #FFF;
+  -webkit-box-shadow: 0 2px 2px 0 black;
+  -moz-box-shadow: 0 2px 2px 0 black;
+  box-shadow: 0 2px 2px 0 black;
+}
+.transformSelectDropdown li {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+.transformSelectDropdown li:hover {
+  color: #FFF;
+  background: #2fe6ce;
+}
+
+/* Booking DatePicker
+========================================================*/
+.tmDatepicker {
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+.tmDatepicker input {
+  cursor: pointer;
+  padding-right: 50px;
+}
+.tmDatepicker input:focus {
+  cursor: text;
+}
+.tmDatepicker:after {
+  content: '\f073';
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 36px;
+  height: 37px;
+  font: 400 20px/20px "FontAwesome";
+  line-height: 37px;
+  text-align: center;
+  color: #fff;
+  border: 3px solid #FFF;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+  z-index: -1;
+}
+.tmDatepicker.open:after, .invalid .tmDatepicker.open:after {
+  border-color: #EBBE74;
+}
+
+.ui-datepicker {
+  padding: 10px;
+  width: 270px;
+  font-size: 13px;
+  display: none;
+  z-index: 100 !important;
+  background: #F9F9F9;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.ui-datepicker a {
+  color: #777;
+}
+.ui-datepicker a:hover {
+  color: #000;
+  text-decoration: none;
+}
+
+.ui-datepicker-prev, .ui-datepicker-next {
+  cursor: pointer;
+}
+
+.ui-datepicker-prev {
+  float: left;
+}
+
+.ui-datepicker-next {
+  float: right;
+}
+
+.ui-datepicker-title {
+  text-align: center;
+}
+
+.ui-datepicker-calendar {
+  margin: 10px auto;
+}
+.ui-datepicker-calendar td {
+  padding: 1px 10px;
+  text-align: center;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day, .ui-datepicker-calendar .ui-datepicker-today {
+  padding: 3px;
+  background: #2fe6ce;
+  color: #FFF;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day a, .ui-datepicker-calendar .ui-datepicker-today a {
+  color: #FFF;
+}
+.ui-datepicker-calendar .ui-datepicker-current-day {
+  background: #2fe6ce;
+  color: #FFF;
+}
+.ui-datepicker-calendar .ui-datepicker-today {
+  background: #f7f7f7;
+  color: #FFF;
+}
+
+button {
+  background: none;
+  border: none;
+  display: inline-block;
+  padding: 0;
+  outline: none;
+  outline-offset: 0;
+  cursor: pointer;
+  -webkit-appearance: none;
+  padding: 4px 6px;
+  background: #2fe6ce;
+  color: #FFF;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+button::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
+button[data-handler='today'] {
+  display: none;
+}
+button:hover {
+  background: #f7f7f7;
+}
+
+.ui-datepicker-close {
+  float: right;
+}
+
+/* Booking Form Messages
+========================================================*/
+.booking-form .error-message {
+  position: absolute;
+  display: inline-block !important;
+  top: -8px;
+  left: 15px;
+  font-weight: normal;
+  text-align: left;
+  font-size: 10px;
+  line-height: 12px;
+  z-index: 4;
+  color: #ff0000;
+  background: #ffffff;
+  padding: 2px 5px;
+  border-radius: 3px;
+  -webkit-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.15);
+}
+@media (max-width: 479px) {
+  .booking-form .error-message {
+    right: 15px;
+  }
+}
+.booking-form .success-message {
+  position: absolute;
+  bottom: 6px;
+  left: 10px;
+  right: 10px;
+  display: block;
+  font-size: 14px;
+  line-height: 20px;
+  color: #494b52;
+}
+@media (max-width: 479px) {
+  .booking-form .success-message {
+    font-size: 10px;
+  }
+}
+
+/* Booking Form FileAttachment
+========================================================*/
+.tmFile .input-group {
+  position: relative;
+  display: table;
+  border-collapse: separate;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.tmFile input.form-control[disabled] {
+  cursor: not-allowed;
+  opacity: 1;
+}
+.tmFile input.form-control {
+  position: relative;
+  z-index: 2;
+  float: left;
+  width: 100%;
+  margin-bottom: 0;
+  padding: 6px 12px;
+  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  -moz-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+.tmFile input.form-control,
+.tmFile .input-group-btn {
+  display: table-cell;
+  border-collapse: separate;
+  float: none !important;
+}
+.tmFile .input-group-btn label {
+  width: auto;
+  margin-left: -1px;
+}
+.tmFile .input-group-btn {
+  position: relative;
+  font-size: 0;
+  white-space: nowrap;
+  width: 1%;
+  vertical-align: middle;
+}
+.tmFile .btn-default {
+  color: #333333;
+  background-color: #ffffff;
+  font-size: 16px;
+  line-height: 18px;
+  cursor: pointer;
+  -moz-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  -webkit-transition: 0.3s all ease;
+  transition: 0.3s all ease;
+}
+.tmFile .btn-default:hover {
+  color: #fff;
+  background-color: #2fe6ce;
+}
+.tmFile .btn-default:active, .tmFile #contact-form .btn-default:focus {
+  outline-offset: -2px;
+  outline: none;
+}
+.tmFile .btn-reset {
+  font-family: "FontAwesome";
+  padding-left: 15px;
+  padding-right: 15px;
+  color: #FFF;
+  background: #f7f7f7;
+}
+.tmFile .btn-reset:hover {
+  background: #2fe6ce;
+}
+.tmFile .btn-reset:before {
+  content: "\f00d";
+}
+
+.tmFile + .tmFile {
+  margin-top: 10px;
+}

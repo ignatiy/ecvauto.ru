@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <title>Выкупим машину</title>
+  <meta charset="utf-8">
+  <link rel="icon" href="/images/favicon.png" type="image/x-icon">
+  <link rel="stylesheet" href="/css/grid.css">
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="/css/booking.css"/>
+  <link rel="stylesheet" href="/css/jquery.fancybox.css"/>
+  <link rel="stylesheet" href="/css/owl-carousel.css"/>
+
+  <script src="/js/jquery.js"></script>
+  <script src="/js/jquery-migrate-1.2.1.js"></script>
+
+
+  <style>
+	.modalDialog {
+		position: fixed;
+		font-family: Arial, Helvetica, sans-serif;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 99999;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		display: none;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		display: block;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 280px;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 20px 13px 20px;
+		border-radius: 10px;
+		background: #fff;
+		background: -moz-linear-gradient(#EDEDED, #999);
+		background: -webkit-linear-gradient(#EDEDED, #999);
+		background: -o-linear-gradient(#EDEDED, #999);
+	}
+
+	.close {
+		background: #606061;
+		color: #FFFFFF;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #00d9ff; }
+	</style>
+
+
+  <script src='/js/device.min.js'></script>
+</head>
+
+<body>
+<div class="page">
+
+    <nav class="top-menu">
+      <a class="navbar-logo" href="http://ecvauto.ru"><img src="/images/logo.png"></a>
+      <a class="navbar-text" href="http://ecvauto.ru">В БАРНАУЛЕ И АЛТАЙСКОМ КРАЕ</a>
+      <ul class="menu-main">
+        <li><a href="tel:+73852690450">т. 69-04-50</a></li>
+      </ul>
+    </nav>
+
+  <!--========================================================
+                            HEADER
+  =========================================================-->
+  <header class="vide" data-vide-bg="/images/orig.jpg">
+    <div class="container vide_content">
+      <div class="brand">
+        
+        <h1 class="brand_name">
+          <a href="http://ecvauto.ru" >
+            СРОЧНЫЙ ВЫКУП АВТО
+          </a>
+        </h1>
+        <p class="brand_slogan">
+          В любом состоянии, до 95% цены, деньги сразу!
+        </p>
+      </div>
+
+
+      <form  method="post" action="/bat/mail.php" class="booking-form">
+        <div class="tmInput">
+          <input name="Auto" placeHolder="Марка автомобиля*" type="text" required>
+        </div>
+        <div class="tmInput">
+          <input name="Age" placeHolder="Год выпуска*" type="text" required>
+        </div>
+        <div class="tmInput">
+          <input name="Price" placeHolder="Ваша цена*" type="text" required>
+        </div>
+        <div class="tmInput">
+          <input name="Phone" placeHolder="Контактный телефон*" type="text" required>
+        </div>
+        <div class="booking-form_controls">
+          <button class="btn" data-type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </header>
+  <!--========================================================
+                            CONTENT
+  =========================================================-->
+  <main>
+    <section class="well">
+      <div class="container center">
+        <h2>Профессиональный автовыкуп</h2>
+        <hr/>
+        <p>Наша компания осуществляет выкуп автомобилей в городе Барнауле и по Алтайскому краю. Вам необходим срочный выкуп авто? Тогда вы обратились точно по адресу Мы выкупим ваш автомобиль дороже всех! Всего через 15 минут Вы получите 95% от стоимости вашего автомобиля наличными.
+        </p>
+
+        <div class="row">
+          <div class="grid_444">
+            <div class="lazy-img" style="padding-bottom:25%; text-align: center;">
+              <img data-src="/images/blue4.png"  alt=""/>
+            </div>
+            <h3 class="primary">ВЫКУП ЗА 15 МИНУТ</h3>
+          </div>
+          <div class="grid_444">
+            <div class="lazy-img" style="padding-bottom:25%;">
+              <img data-src="/images/blue5.png"  alt=""/>
+            </div>
+            <h3 class="primary">ПРИЕЗЖАЕМ САМИ</h3>
+          </div>
+          <div class="grid_444">
+            <div class="lazy-img" style="padding-bottom:25%;">
+              <img data-src="/images/blue1.png" alt=""/>
+            </div>
+            <h3 class="primary">ПОЛНЫЙ ПАКЕТ ДОКУМЕНТОВ</h3>
+          </div>
+          <div class="grid_444">
+            <div class="lazy-img" style="padding-bottom:25%;">
+              <img data-src="/images/blue2.png"  alt=""/>
+            </div>
+            <h3 class="primary">ДО 95% ЦЕНЫ АВТО</h3>
+          </div>
+          <div class="grid_444">
+            <div class="lazy-img" style="padding-bottom:25%;">
+              <img data-src="/images/blue3.png"  alt=""/>
+            </div>
+            <h3 class="primary">ЮРИДИЧЕСКИ ЧИСТАЯ СДЕЛКА</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!--========================================================
+                            FOOTER
+  =========================================================-->
+  <footer>
+    <div class="parallax" data-url="/images/auto115.jpg" data-mobile="true" data-speed="0.5 " data-direction="inverted">
+      <div class="well4">
+        <div class="container center wow fadeInUp" data-wow-delay="0.2s">
+          
+          <h2>ПОЛУЧИТЕ ЦЕНУ ВЫКУПА СЕЙЧАС!</h2>
+
+          <h3>это займёт всего 1 мин. вашего времени</h3>
+          <h5>Гарантируем, что ваши данные не будут переданы 3-м лицам или использоваться в СПАМ рассылках.</h5>
+          <a class="btn" href='#openModal'>Получить цену</a>
+
+    <div id="openModal" class="modalDialog">
+		<div>
+			<a href="#close" title="Закрыть" class="close">X</a>
+			<form  method="post" action="/bat/mail.php" class="booking-form">
+		        <div class="tmInput">
+		          <input name="Auto" placeHolder="Марка*" type="text" required>
+		        </div>
+		        <div class="tmInput">
+		          <input name="Age" placeHolder="Год*" type="text" required>
+		        </div>
+		        <div class="tmInput">
+		          <input name="Price" placeHolder="Цена*" type="text" required>
+		        </div>
+		        <div class="tmInput">
+		          <input name="Phone" placeHolder="Телефон*" type="text" required>
+		        </div>
+		        <div class="booking-form_controls">
+		          <button class="btn" data-type="submit">Отправить</button>
+		        </div>
+		      </form>
+		</div>
+	</div>
+
+
+          <div class="copyright">
+            © <span id="copyright-year"></span> Срочный выкуп авто. Все права защищены!
+            <!-- {%FOOTER_LINK} -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="well5 center">
+      <div class="container">
+        <p>Разработка сайта - <a href="https://github.com/ignatiy"><em>IgnatiyOS</em></a></p>
+      </div>
+    </div>
+
+  </footer>
+</div>
+
+<script src="/js/script.js"></script>
+<script src="/bat/ajax.js"></script>
+<!-- coded by Diversant -->
+</body>
+</html>

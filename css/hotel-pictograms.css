@@ -1,0 +1,115 @@
+/**
+ * Title: Hotel Pictograms Flaticon Pack
+ * Author: Freepik
+ * Source: http://www.flaticon.com/packs/hotel-pictograms
+ * License: Flaticon Basic License (http://cdn.flaticon.com/license/license.pdf)
+ */
+
+@font-face {
+	font-family: "Hotel Pictograms";
+	src: url("../fonts/hotel-pictograms.eot");
+	src: url("../fonts/hotel-pictograms.eot#iefix") format("embedded-opentype"),
+	url("../fonts/hotel-pictograms.woff") format("woff"),
+	url("../fonts/hotel-pictograms.ttf") format("truetype"),
+	url("../fonts/hotel-pictograms.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: 'Hotel Pictograms';
+	font-style: normal;
+	font-weight: 400;
+}
+
+.flaticon-airport7:before {
+	content: "\e000";
+}
+.flaticon-alarm53:before {
+	content: "\e001";
+}
+.flaticon-basic11:before {
+	content: "\e002";
+}
+.flaticon-bathtub6:before {
+	content: "\e003";
+}
+.flaticon-bed25:before {
+	content: "\e004";
+}
+.flaticon-camera83:before {
+	content: "\e005";
+}
+.flaticon-car164:before {
+	content: "\e006";
+}
+.flaticon-cocktail31:before {
+	content: "\e007";
+}
+.flaticon-coffee69:before {
+	content: "\e008";
+}
+.flaticon-compass108:before {
+	content: "\e009";
+}
+.flaticon-credit104:before {
+	content: "\e00a";
+}
+.flaticon-do11:before {
+	content: "\e00b";
+}
+.flaticon-folder216:before {
+	content: "\e00c";
+}
+.flaticon-hamburger7:before {
+	content: "\e00d";
+}
+.flaticon-hotel69:before {
+	content: "\e00e";
+}
+.flaticon-hotel70:before {
+	content: "\e00f";
+}
+.flaticon-hotel71:before {
+	content: "\e010";
+}
+.flaticon-hotel72:before {
+	content: "\e011";
+}
+.flaticon-hotel73:before {
+	content: "\e012";
+}
+.flaticon-ice80:before {
+	content: "\e013";
+}
+.flaticon-laundry10:before {
+	content: "\e014";
+}
+.flaticon-luggage3:before {
+	content: "\e015";
+}
+.flaticon-map104:before {
+	content: "\e016";
+}
+.flaticon-phone378:before {
+	content: "\e017";
+}
+.flaticon-swimming24:before {
+	content: "\e018";
+}
+.flaticon-toilets1:before {
+	content: "\e019";
+}
+.flaticon-towel3:before {
+	content: "\e01a";
+}
+.flaticon-two400:before {
+	content: "\e01b";
+}
+.flaticon-widescreen10:before {
+	content: "\e01c";
+}
+.flaticon-woman129:before {
+	content: "\e01d";
+}
