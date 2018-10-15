@@ -103,18 +103,38 @@
       </div>
 
 
-      <form  method="post" action="/bat/mail.php" class="booking-form">
+	<script>
+        function f1() {
+            var Auto = document.getElementById('Auto')
+            Auto.value = Auto.value.replace(/\s/g, '')
+        }
+        function f2() {
+            var Age = document.getElementById('Age')
+            Age.value = Age.value.replace(/\s/g, '')
+        }
+        function f3() {
+            var Price = document.getElementById('Price')
+            Price.value = Price.value.replace(/\s/g, '')
+        }
+        function f4() {
+            var Phone = document.getElementById('Phone')
+            Phone.value = Phone.value.replace(/\s/g, '')
+        }
+      </script>
+
+
+      <form method="post" action="/bat/mail.php" class="booking-form">
         <div class="tmInput">
-          <input name="Auto" placeHolder="Марка автомобиля*" type="text" required>
+          <input name="Auto" placeHolder="Марка автомобиля*" type="text" id='Auto' onblur='f1()' required>
         </div>
         <div class="tmInput">
-          <input name="Age" placeHolder="Год выпуска*" type="text" required>
+          <input name="Age" placeHolder="Год выпуска*" type="text" id='Age' onblur='f2()' required>
         </div>
         <div class="tmInput">
-          <input name="Price" placeHolder="Ваша цена*" type="text" required>
+          <input name="Price" placeHolder="Ваша цена*" type="text" id='Price' onblur='f3()' required>
         </div>
         <div class="tmInput">
-          <input name="Phone" placeHolder="Контактный телефон*" type="text" required>
+          <input name="Phone" placeHolder="Контактный телефон*" type="text" id='Phone' onblur='f4()' required>
         </div>
         <div class="booking-form_controls">
           <button class="btn" data-type="submit">Отправить</button>
@@ -186,7 +206,66 @@
     <div id="openModal" class="modalDialog">
 		<div>
 			<a href="#close" title="Закрыть" class="close">X</a>
-			<form  method="post" action="/bat/mail.php" class="booking-form">
+	<script>
+             function CheckAuto()
+              {
+                with(document.formrecord)
+                {
+                    if(Auto.value.match(/\ /)){
+                    alert("Мы обнаружили пробел.. Пожалуйста введите марку корректно");
+                    Auto.focus();
+                    Auto.value="";
+                    return false;
+
+                  }
+              }
+                return true;
+              }
+              function CheckAge()
+              {
+                with(document.formrecord)
+                {
+                    if(Age.value.match(/\ /)){
+                    alert("Мы обнаружили пробел.. Пожалуйста введите год корректно");
+                    Age.focus();
+                    Age.value="";
+                    return false;
+
+                  }
+              }
+                return true;
+              }
+              function CheckPrice()
+              {
+                with(document.formrecord)
+                {
+                    if(Price.value.match(/\ /)){
+                    alert("Мы обнаружили пробел.. Пожалуйста введите цену корректно");
+                    Price.focus();
+                    Price.value="";
+                    return false;
+
+                  }
+              }
+                return true;
+              }
+              function CheckPhone()
+              {
+                with(document.formrecord)
+                {
+                    if(Phone.value.match(/\ /)){
+                    alert("Мы обнаружили пробел.. Пожалуйста введите телефон корректно");
+                    Phone.focus();
+                    Phone.value="";
+                    return false;
+
+                  }
+              }
+                return true;
+              }       
+            </script>
+
+      			<form name="formrecord" onsubmit="return (CheckAuto()&&CheckAge()&&CheckPrice()&&CheckPhone())" method="post" action="/bat/mail.php" class="booking-form">
 		        <div class="tmInput">
 		          <input name="Auto" placeHolder="Марка*" type="text" required>
 		        </div>
@@ -224,7 +303,37 @@
 </div>
 
 <script src="/js/script.js"></script>
-<script src="/bat/ajax.js"></script>
-<!-- coded by Diversant -->
+<!-- <script src="/bat/ajax.js"></script> -->
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function (d, w, c) {
+        (w[c] = w[c] || []).push(function() {
+            try {
+                w.yaCounter50736931 = new Ya.Metrika2({
+                    id:50736931,
+                    clickmap:true,
+                    trackLinks:true,
+                    accurateTrackBounce:true,
+                    webvisor:true
+                });
+            } catch(e) { }
+        });
+
+        var n = d.getElementsByTagName("script")[0],
+            s = d.createElement("script"),
+            f = function () { n.parentNode.insertBefore(s, n); };
+        s.type = "text/javascript";
+        s.async = true;
+        s.src = "https://mc.yandex.ru/metrika/tag.js";
+
+        if (w.opera == "[object Opera]") {
+            d.addEventListener("DOMContentLoaded", f, false);
+        } else { f(); }
+    })(document, window, "yandex_metrika_callbacks2");
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/50736931" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+	
 </body>
 </html>
